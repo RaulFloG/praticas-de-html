@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Página principal</title>
+</head>
+<body>
+	<script>
+			function processar(numero, resultado) {
+			var saida = document.getElementById(resultado.id);
+			
+			if (numero > 0){
+				saida.innerHTML = "O número indicado (" + numero + ") é positivo";
+			}
+			else
+			if (numero < 0){
+				saida.innerHTML = "O número indicado (" + numero + ") é negativo";
+			}
+			else{
+				saida.innerHTML  = "O número indicado (" + numero + ") é zero";
+			}
+		}
+		
+	</script>
+	
+	<form>
+
+		Informe um número:
+		<br />
+		<input type = "text" id = "numero" />
+
+		<br /><br />
+		Resultado: 
+		<label id = "resultado"></label>
+
+		<br /><br />
+		<input type = "button" value = "Processar" onClick="processar(form.numero.value, resultado)" />
+		<input type = "reset" value = "Limpar" onClick="document.getElementById('resultado').innerHTML = '';" />
+
+	</form>
+</body>
+</html>
